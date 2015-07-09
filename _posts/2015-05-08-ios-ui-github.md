@@ -12,7 +12,7 @@ source_github_items: [
                          {
                               source_url: "https://github.com/jdg/MBProgressHUD",
                               source_imgs: [
-                                        "http://dl.dropbox.com/u/378729/MBProgressHUD/1.png",
+                              "https://camo.githubusercontent.com/8211f8a4fa848499e174fa3d6125adb2044c182e/687474703a2f2f646c2e64726f70626f782e636f6d2f752f3337383732392f4d4250726f67726573734855442f312d7468756d622e706e67",
                               ]
                          },
 
@@ -20,6 +20,7 @@ source_github_items: [
                               source_url: "https://github.com/mrackwitz/MRProgress",
                               source_imgs: [
                                         "https://github.com/mrackwitz/MRProgress/raw/master/Images/screenshot_004_2.jpg",
+                                        "https://github.com/mrackwitz/MRProgress/raw/master/Images/circular_indeterminate.gif",
                               ]
                          },
                          
@@ -27,6 +28,14 @@ source_github_items: [
                               source_url: "https://github.com/TransitApp/SVProgressHUD",
                               source_imgs: [
                                         "https://camo.githubusercontent.com/6ed028acbf67707d622344e0ef1bc3b098425b50/687474703a2f2f662e636c2e6c792f6974656d732f32473146315a304d306b306832553356317033392f535650726f67726573734855442e676966",
+                              ]
+                         },
+                         {
+                              source_url: "https://github.com/Marxon13/M13ProgressSuite",
+                              source_imgs: [
+                                        "https://camo.githubusercontent.com/09f2c629a458564176f6096db0be1a69b8eaad92/68747470733a2f2f7261772e6769746875622e636f6d2f4d6172786f6e31332f4d313350726f677265737353756974652f6d61737465722f526561646d655265736f75726365732f55494e617669676174696f6e4261722e676966",
+                                        "https://camo.githubusercontent.com/43c88763dfb22758f0f291404655e93d346b0b7d/68747470733a2f2f7261772e6769746875622e636f6d2f4d6172786f6e31332f4d313350726f677265737353756974652f6d61737465722f526561646d655265736f75726365732f4261722e676966",
+                                        "https://camo.githubusercontent.com/e54ca5075db0dfafc39bdce255f0432bd925343c/68747470733a2f2f7261772e6769746875622e636f6d2f4d6172786f6e31332f4d313350726f677265737353756974652f6d61737465722f526561646d655265736f75726365732f52696e672e676966",
                               ]
                          },
 
@@ -89,6 +98,7 @@ source_github_items: [
 	}
     .css_project_img{
         max-height:100%;
+        max-width:33%;
     }
     </style>
 </head>
@@ -112,6 +122,7 @@ source_github_items: [
 			</div>
 			<h4>
 				<a href="{{project.source_url}}">{{project.source_url | split:'/' | last}}</a>
+                {{project.source_description}}
 			</h4>
 		{% endfor %}
 	{% endfor %}
