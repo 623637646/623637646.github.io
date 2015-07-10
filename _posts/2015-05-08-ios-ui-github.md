@@ -11,6 +11,7 @@ source_github_items: [
           source_projects: [
                          {
                               source_url: "https://github.com/jdg/MBProgressHUD",
+                              source_description: "常用",
                               source_imgs: [
                               "https://camo.githubusercontent.com/8211f8a4fa848499e174fa3d6125adb2044c182e/687474703a2f2f646c2e64726f70626f782e636f6d2f752f3337383732392f4d4250726f67726573734855442f312d7468756d622e706e67",
                               ]
@@ -92,6 +93,9 @@ source_github_items: [
 ---
 
 <head>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <style type="text/css">
 	.css_project_img_div {
 		height:150px;
@@ -102,6 +106,7 @@ source_github_items: [
     }
     </style>
 </head>
+
 
 <div>
 	
@@ -117,12 +122,12 @@ source_github_items: [
 		{% for project in github_item.source_projects %}
 			<div class="css_project_img_div">
 				{% for img in project.source_imgs %}
-					<img class="css_project_img" src="{{img}}" alt="效果图">
+					<img class="css_project_img img-rounded" src="{{img}}" alt="效果图">
 				{% endfor %}			
 			</div>
 			<h4>
-				<a href="{{project.source_url}}">{{project.source_url | split:'/' | last}}</a>
-                {{project.source_description}}
+                <a href="{{project.source_url}}" class="btn btn-default" role="button">{{project.source_url | split:'/' | last}}</a>
+                <small>{{project.source_description}}</small>
 			</h4>
 		{% endfor %}
 	{% endfor %}
