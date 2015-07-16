@@ -194,22 +194,6 @@ source_github_items: [
 
 
 <div class="row">
-    <!--Nav Bar -->
-    <nav class="col-xs-3 bs-docs-sidebar">
-        <ul id="sidebar" class="nav nav-stacked fixed">
-            {% for github_item in page.source_github_items %}
-                {% capture group %}{% for keyword in github_item.source_keywords %}{{ keyword }}{% if forloop.rindex != 1 %},{% endif %}{% endfor %}{% endcapture %}
-                <li>
-                    <a href="#{{group | replace:',', '-'}}">{{group}}</a>
-                    <ul class="nav nav-stacked">
-                        {% for project in github_item.source_projects %}
-                            <li><a href="#{{project.source_repo}}">{{project.source_repo}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
     <!--Main Content -->
     <div class="col-xs-9">
         {% for github_item in page.source_github_items %}
@@ -233,4 +217,20 @@ source_github_items: [
             </section>
         {% endfor %}   
     </div>
+    <!--Nav Bar -->
+    <nav class="col-xs-3 bs-docs-sidebar">
+        <ul id="sidebar" class="nav nav-stacked fixed">
+            {% for github_item in page.source_github_items %}
+                {% capture group %}{% for keyword in github_item.source_keywords %}{{ keyword }}{% if forloop.rindex != 1 %},{% endif %}{% endfor %}{% endcapture %}
+                <li>
+                    <a href="#{{group | replace:',', '-'}}">{{group}}</a>
+                    <ul class="nav nav-stacked">
+                        {% for project in github_item.source_projects %}
+                            <li><a href="#{{project.source_repo}}">{{project.source_repo}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
 </div>
