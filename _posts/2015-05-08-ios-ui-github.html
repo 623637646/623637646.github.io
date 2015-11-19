@@ -477,7 +477,6 @@ source_github_items: [
 					"https://camo.githubusercontent.com/cd7aefc21305aea7345e6a24b5066d60aff298bd/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f313539393636322f7069652e706e67",
 					"https://camo.githubusercontent.com/aca0d1763008ff07a4a52fb3c4a2aec24beb8a83/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f313539393636322f736361747465722e706e67",
 					"https://camo.githubusercontent.com/4d5e2514875305c3596b2546d4441371b210e056/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f343930343434372f706e63686172745f6c6567656e645f312e706e67",
-					"https://camo.githubusercontent.com/911e1e0a24fd4d70a8245b740bde5e739f93353e/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f343930343434372f706e63686172745f6c6567656e645f322e706e67",
 				]
 			},
 		]
@@ -547,6 +546,7 @@ source_github_items: [
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="//cdn.bootcss.com/layzr.js/1.4.3/layzr.min.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
 			$('body').scrollspy({
@@ -559,6 +559,7 @@ source_github_items: [
 				bottom: $('body').height()-$('.main-content').offset().top-$('.main-content').height()+20
 			  }
 			});
+			var layzr = new Layzr({});
 		});
     </script>
 	
@@ -642,11 +643,11 @@ source_github_items: [
                     <div id="{{project.source_repo}}" class="subgroup">
                         <a href="//github.com/{{project.source_user}}/{{project.source_repo}}" role="button" target="_blank">{{project.source_repo}}</a>
 						<h5>{{project.source_description}}</h5>
-                        <iframe src="https://ghbtns.com/github-btn.html?user={{project.source_user}}&repo={{project.source_repo}}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                        <iframe data-layzr="https://ghbtns.com/github-btn.html?user={{project.source_user}}&repo={{project.source_repo}}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
                         {% if project.source_imgs %}
 						<div class="row">
                             {% for img in project.source_imgs %}
-                                <img class="col-md-6" src="{{img}}" alt="效果图"/>
+                                <img class="col-md-6" data-layzr="{{img}}">
                             {% endfor %}
 						</div>
                         {% endif %} 
