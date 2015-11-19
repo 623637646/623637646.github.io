@@ -574,14 +574,6 @@ source_github_items: [
             padding-bottom: 30px;
         }
 		
-		.css_project_img_div {
-			height:100px;
-		}
-		.css_project_img{
-			max-height:100%;
-			max-width:33%;
-		}
-		
 		/* 侧边栏*/
 		.bs-docs-sidebar.affix,.bs-docs-sidebar.affix-top{
 			top:20px
@@ -641,7 +633,7 @@ source_github_items: [
 
 <div class="row">
     <!--Main Content -->
-    <div class="col-xs-7 main-content">
+    <div class="col-md-8 main-content">
         {% for github_item in page.source_github_items %}
             {% capture group %}{% for keyword in github_item.source_keywords %}{{ keyword }}{% if forloop.rindex != 1 %},{% endif %}{% endfor %}{% endcapture %}
             <section id="{{group | replace:',', '-'}}" class="group">
@@ -649,14 +641,14 @@ source_github_items: [
                 {% for project in github_item.source_projects %}
                     <div id="{{project.source_repo}}" class="subgroup">
                         <a href="//github.com/{{project.source_user}}/{{project.source_repo}}" role="button" target="_blank">{{project.source_repo}}</a>
+						<h5>{{project.source_description}}</h5>
                         <iframe src="https://ghbtns.com/github-btn.html?user={{project.source_user}}&repo={{project.source_repo}}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-                        {{project.source_description}}
                         {% if project.source_imgs %}
-                            <div class="css_project_img_div">
+						<div class="row">
                             {% for img in project.source_imgs %}
-                                <img class="css_project_img img-rounded" src="{{img}}" alt="效果图">
-                            {% endfor %}			
-                            </div>
+                                <img class="col-md-6" src="{{img}}" alt="效果图"/>
+                            {% endfor %}
+						</div>
                         {% endif %} 
                     </div>
                 {% endfor %}
@@ -664,7 +656,7 @@ source_github_items: [
         {% endfor %}   
     </div>
     <!--Nav Bar -->
-	<div class="col-xs-5">
+	<div class="col-md-4">
 		<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
 			<ul class="nav bs-docs-sidenav">
 				{% for github_item in page.source_github_items %}
