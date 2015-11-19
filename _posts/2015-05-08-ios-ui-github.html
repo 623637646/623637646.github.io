@@ -516,7 +516,7 @@ source_github_items: [
                 <h3>{{group}}</h3>
                 {% for project in github_item.source_projects %}
                     <div id="{{project.source_repo}}" class="subgroup">
-                        <a href="//github.com/{{project.source_user}}/{{project.source_repo}}" role="button">{{project.source_repo}}</a>
+                        <a href="//github.com/{{project.source_user}}/{{project.source_repo}}" role="button" target="_blank">{{project.source_repo}}</a>
                         <iframe src="https://ghbtns.com/github-btn.html?user={{project.source_user}}&repo={{project.source_repo}}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
                         {{project.source_description}}
                         {% if project.source_imgs %}
