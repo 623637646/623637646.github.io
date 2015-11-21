@@ -991,16 +991,32 @@ source_github_items: [
 	<script src="//cdn.bootcss.com/layzr.js/1.4.3/layzr.min.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
+			// 滚动监听
 			$('body').scrollspy({
 				target: '.bs-docs-sidebar',
 				offset: 40
-			});		
+			});	
+			$('.bs-docs-sidebar').on('activate.bs.scrollspy', function (event) {
+				var $target=$(event.target);
+				if($target.parent().is('.bs-docs-sidenav')){
+					$('.bs-docs-sidebar.affix').css('top',function(){
+						var sidebarMaxTop = $(window).height()/4.0;
+						if($target.position().top<sidebarMaxTop){
+							return 20;
+						}else{
+							return 20-$target.position().top+sidebarMaxTop;
+						}
+					});
+				}
+			});
+			// 悬浮导航栏
 			$('.bs-docs-sidebar').affix({
 			  offset: {
 				top: $('.bs-docs-sidebar').offset().top,
 				bottom: $('body').height()-$('.main-content').offset().top-$('.main-content').height()+20
 			  }
 			});
+			// 懒加载图片
 			var layzr = new Layzr({});
 		});
     </script>
@@ -1089,10 +1105,10 @@ source_github_items: [
                         {% if project.source_imgs %}
 						<div class="row">
                             {% for img in project.source_imgs %}
-                                <img class="col-md-3" data-layzr="{{img}}">
+                                <img class="col-md-3" data-layzr="{{img}}"/>
                             {% endfor %}
 						</div>
-                        {% endif %} 
+                        {% endif %}
                     </div>
                 {% endfor %}
             </section>
