@@ -1,0 +1,172 @@
+<head>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="//cdn.bootcss.com/layzr.js/1.4.3/layzr.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+		
+			// 滚动监听
+			$('body').scrollspy({
+				target: '.bs-docs-sidebar',
+				offset: 40
+			});
+			
+			// 导航栏位置修正
+			var fixSidebarPosition = function ($target) {
+				if($target.parent().is('.bs-docs-sidenav')){
+					$('.bs-docs-sidebar.affix').css('top',function(){
+						var sidebarMaxTop = $(window).height()/4.0;
+						if($target.position().top<sidebarMaxTop){
+							return 20;
+						}else{
+							return 20-$target.position().top+sidebarMaxTop;
+						}
+					});
+				}
+			};
+			// 首次修正
+			//$('.bs-docs-sidebar').on('style', function (event) {
+			//	fixSidebarPosition($('.bs-docs-sidebar>.nav>li.active'));
+			//});
+			// 滑动修正
+			$('.bs-docs-sidebar').on('activate.bs.scrollspy', function (event) {
+				var $target=$(event.target);
+				fixSidebarPosition($target);
+			});
+			
+			// 悬浮导航栏
+			$('.bs-docs-sidebar').affix({
+			  offset: {
+				top: $('.bs-docs-sidebar').offset().top,
+				bottom: $('body').height()-$('.main-content').offset().top-$('.main-content').height()+20
+			  }
+			});
+			
+			// 懒加载图片
+			var layzr = new Layzr({
+			//	callback: function() {
+			//		$('body').each(function () {
+			//		  var $spy = $(this).scrollspy('refresh');
+			//		});
+			//		
+			//		$('.bs-docs-sidebar').each(function () {
+			//		  var $spy = $(this).scrollspy('refresh');
+			//		});
+			//	}
+			});
+		});
+    </script>
+	
+	
+    <style type="text/css">
+		/* 主内容 */
+        .group {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .group .subgroup {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+		
+		/* 侧边栏*/
+		.bs-docs-sidebar.affix,.bs-docs-sidebar.affix-top{
+			top:20px
+		}
+		.bs-docs-sidebar.affix-bottom {
+			position:absolute
+		}
+		
+		.bs-docs-sidebar .nav>li>a {
+			display:block;
+			padding:4px 20px;
+			font-size:13px;
+			font-weight:500;
+			color:#767676
+		}
+		.bs-docs-sidebar .nav>li>a:focus,.bs-docs-sidebar .nav>li>a:hover {
+			padding-left:19px;
+			color:#563d7c;
+			text-decoration:none;
+			background-color:transparent;
+			border-left:1px solid #563d7c
+		}
+		.bs-docs-sidebar .nav>.active:focus>a,.bs-docs-sidebar .nav>.active:hover>a,.bs-docs-sidebar .nav>.active>a {
+			padding-left:18px;
+			font-weight:700;
+			color:#563d7c;
+			background-color:transparent;
+			border-left:2px solid #563d7c
+		}
+		.bs-docs-sidebar .nav .nav {
+			display:none;
+			padding-bottom:10px
+		}
+		.bs-docs-sidebar .nav .nav>li>a {
+			padding-top:1px;
+			padding-bottom:1px;
+			padding-left:30px;
+			font-size:12px;
+			font-weight:400
+		}
+		.bs-docs-sidebar .nav .nav>li>a:focus,.bs-docs-sidebar .nav .nav>li>a:hover {
+			padding-left:29px
+		}
+		.bs-docs-sidebar .nav .nav>.active:focus>a,.bs-docs-sidebar .nav .nav>.active:hover>a,.bs-docs-sidebar .nav .nav>.active>a {
+			padding-left:28px;
+			font-weight:500
+		}
+		@media (min-width:992px) {
+			.bs-docs-sidebar .nav>.active>ul {
+			display:block
+		}
+    </style>
+</head>
+
+
+
+
+<div class="row">
+    <!--Main Content -->
+    <div class="col-md-8 main-content">
+        {% for github_item in page.source_github_items %}
+            {% capture group %}{% for keyword in github_item.source_keywords %}{{ keyword }}{% if forloop.rindex != 1 %},{% endif %}{% endfor %}{% endcapture %}
+            <section id="{{group | replace:',', '-'}}" class="group">
+                <h3>{{group}}</h3>
+                {% for project in github_item.source_projects %}
+                    <div id="{{project.source_repo}}" class="subgroup">
+                        <a href="//github.com/{{project.source_user}}/{{project.source_repo}}" role="button" target="_blank">{{project.source_repo}}</a>
+						<h5>{{project.source_description}}</h5>
+                        <iframe data-layzr="https://ghbtns.com/github-btn.html?user={{project.source_user}}&repo={{project.source_repo}}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                        {% if project.source_imgs %}
+						<div class="row">
+                            {% for img in project.source_imgs %}
+                                <img class="col-md-3" data-layzr="{{img}}"/>
+                            {% endfor %}
+						</div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </section>
+        {% endfor %}   
+    </div>
+    <!--Nav Bar -->
+	<div class="col-md-4">
+		<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+			<ul class="nav bs-docs-sidenav">
+				{% for github_item in page.source_github_items %}
+					{% capture group %}{% for keyword in github_item.source_keywords %}{{ keyword }}{% if forloop.rindex != 1 %},{% endif %}{% endfor %}{% endcapture %}
+					<li>
+						<a href="#{{group | replace:',', '-'}}">{{group}}</a>
+						<ul class="nav">
+							{% for project in github_item.source_projects %}
+								<li><a href="#{{project.source_repo}}">{{project.source_repo}}</a></li>
+							{% endfor %}
+						</ul>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+</div>
