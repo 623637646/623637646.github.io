@@ -1,0 +1,1492 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon.jpeg">
+  <link rel="icon" href="/images/favicon.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="王氩">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Loading, Shimmer, Skeleton, Toast, Hubflutter_spinkitstars: 2.6k    &lt;android, animation, animation-library, dart, dartlang, flutter, flutter-plugin, ios, loaders, loading, loading-animations, spin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flutter UI libraries">
+<meta property="og:url" content="http://623637646.github.io/2021/02/26/Flutter%20UI/index.html">
+<meta property="og:site_name" content="码猴王">
+<meta property="og:description" content="Loading, Shimmer, Skeleton, Toast, Hubflutter_spinkitstars: 2.6k    &lt;android, animation, animation-library, dart, dartlang, flutter, flutter-plugin, ios, loaders, loading, loading-animations, spin">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/jogboms/flutter_spinkit/master/screenshots/spinkit_wave_spinner.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/abhishek0706/flutter_spinkit/square_circle/screenshots/square_circle.gif">
+<meta property="og:image" content="https://avatars2.githubusercontent.com/u/6208486?s=400&u=01fab3fc9bb3d2ee799e314d3fe23c54d1deeb07&v=4">
+<meta property="og:image" content="https://github.com/hnvn/flutter_shimmer/raw/master/screenshots/loading_list.gif?raw=true">
+<meta property="og:image" content="https://github.com/hnvn/flutter_shimmer/raw/master/screenshots/slide_to_unlock.gif?raw=true">
+<meta property="og:image" content="https://raw.githubusercontent.com/ponnamkarthik/FlutterToast/master/screenshot/11.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/ponnamkarthik/FlutterToast/master/screenshot/1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ponnamkarthik/FlutterToast/master/screenshot/2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/nslogx/flutter_easyloading/master/images/jetbrains.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/nslogx/flutter_easyloading/master/images/gif01.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/nslogx/flutter_easyloading/master/images/gif02.gif">
+<meta property="og:image" content="https://github.com/MMMzq/bot_toast/raw/master/doc/gif/custom_animation.gif">
+<meta property="og:image" content="https://github.com/MMMzq/bot_toast/raw/master/doc/gif/loading.gif">
+<meta property="og:image" content="https://github.com/MMMzq/bot_toast/raw/master/doc/gif/text.gif">
+<meta property="og:image" content="https://image.ibb.co/doViid/screen1.png">
+<meta property="og:image" content="https://image.ibb.co/bszyGy/screen2.png">
+<meta property="og:image" content="https://media.giphy.com/media/88j2PmdEqCrLq2pZxO/giphy.gif">
+<meta property="og:image" content="https://github.com/ifgyong/flutter_easyHub/raw/master/images/all.gif">
+<meta property="og:image" content="https://github.com/ifgyong/flutter_easyHub/raw/master/images/example2.gif">
+<meta property="og:image" content="https://github.com/ifgyong/flutter_easyHub/raw/master/images/example3.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/akshathjain/sliding_up_panel/master/screenshots/simpleusageclosed.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/akshathjain/sliding_up_panel/master/screenshots/simpleusagemidway.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/akshathjain/sliding_up_panel/master/screenshots/simpleusageopen.png">
+<meta property="og:image" content="https://github.com/mobiten/flutter_staggered_animations/raw/master/assets/card_list.gif?raw=true">
+<meta property="og:image" content="https://github.com/mobiten/flutter_staggered_animations/raw/master/assets/card_grid.gif?raw=true">
+<meta property="og:image" content="https://github.com/mobiten/flutter_staggered_animations/raw/master/assets/card_column.gif?raw=true">
+<meta property="og:image" content="https://raw.githubusercontent.com/iamSahdeep/liquid_swipe_flutter/master/assets/page1.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/1200/1*2yFbiGdcACiuLGo4dMKmJw.jpeg">
+<meta property="og:image" content="https://avatars1.githubusercontent.com/u/26563213?v=4">
+<meta property="og:image" content="https://github.com/Milad-Akarie/smooth_page_indicator/raw/master/demo/smooth_page_indicator_demo_1.gif?raw=true">
+<meta property="og:image" content="https://github.com/Milad-Akarie/smooth_page_indicator/raw/master/demo/smooth_page_indicator_demo_loop.gif?raw=true">
+<meta property="og:image" content="https://github.com/Milad-Akarie/smooth_page_indicator/raw/master/demo/smooth_page_indicator_demo_4.gif?raw=true">
+<meta property="og:image" content="https://github.com/kherel/animated_theme_switcher/raw/master/demo.gif">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/846b5b7e53734048acdca30923fde68a~tplv-k3u1fbpfcp-zoom-1.image">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/005efc69521e40f39aad976b8f1d7327~tplv-k3u1fbpfcp-zoom-1.image">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b38b45cc5f1a4c07afef8e24c4f741ce~tplv-k3u1fbpfcp-zoom-1.image">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/32631467?v=4">
+<meta property="og:image" content="https://user-images.githubusercontent.com/31307345/59602739-2f022d00-9125-11e9-84ef-19a33f8bd782.gif">
+<meta property="og:image" content="https://user-images.githubusercontent.com/31307345/59602740-2f022d00-9125-11e9-8ee6-044e44f6048f.gif">
+<meta property="og:image" content="https://user-images.githubusercontent.com/31307345/59602744-2f9ac380-9125-11e9-8a8f-7e68bdc27c16.gif">
+<meta property="og:image" content="https://github.com/Mindinventory/flutter_draggable_gridview/raw/main/assets/draggable_gridview.gif">
+<meta property="og:image" content="https://user-images.githubusercontent.com/6718144/56463745-45ec0380-63b0-11e9-8e56-0dba5deabb1a.gif">
+<meta property="og:image" content="https://user-images.githubusercontent.com/6718144/56463769-e93d1880-63b0-11e9-8586-55827c95b89c.gif">
+<meta property="og:image" content="https://user-images.githubusercontent.com/6718144/56464051-3328fd00-63b7-11e9-9c4d-73b04f72a81e.gif">
+<meta property="og:image" content="https://user-images.githubusercontent.com/2842459/62599914-91de9c00-b8fe-11e9-8fb7-4af57d5100f7.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dnfield/flutter_svg/7d374d7107561cbd906d7c0ca26fef02cc01e7c8/example/assets/flutter_logo.svg?sanitize=true">
+<meta property="og:image" content="https://user-images.githubusercontent.com/1295961/75059847-129d6800-54de-11ea-8832-d19ea58eb7eb.png">
+<meta property="og:image" content="https://fluttercommunity.dev/_github/header/flutter_blurhash">
+<meta property="og:image" content="https://raw.githubusercontent.com/xuelongqy/donation/master/ethereum_qr.png?raw=true">
+<meta property="og:image" content="https://raw.githubusercontent.com/xuelongqy/donation/master/tron_qr.png?raw=true">
+<meta property="og:image" content="https://raw.githubusercontent.com/xuelongqy/donation/master/bitcoin_qr.png?raw=true">
+<meta property="og:image" content="https://github.com/peng8350/flutter_pulltorefresh/raw/master/arts/example1.gif">
+<meta property="og:image" content="https://github.com/peng8350/flutter_pulltorefresh/raw/master/arts/example2.gif">
+<meta property="og:image" content="https://github.com/peng8350/flutter_pulltorefresh/raw/master/arts/example3.gif">
+<meta property="og:image" content="https://github.com/aagarwal1012/Liquid-Pull-To-Refresh/raw/master/display/cover.png?raw=true">
+<meta property="og:image" content="https://github.com/aagarwal1012/Liquid-Pull-To-Refresh/raw/master/display/liquid.gif?raw=true">
+<meta property="og:image" content="https://github.com/aagarwal1012/Liquid-Pull-To-Refresh/raw/master/display/liquid_false.gif?raw=true">
+<meta property="og:image" content="https://github.com/gonuit/flutter-custom-refresh-indicator/raw/master/readme/cover.png">
+<meta property="og:image" content="https://github.com/gonuit/flutter-custom-refresh-indicator/raw/master/readme/plane_indicator.gif">
+<meta property="og:image" content="https://github.com/gonuit/flutter-custom-refresh-indicator/raw/master/readme/ice_cream_indicator.gif">
+<meta property="og:image" content="https://github.com/jzoom/images/raw/master/layout2.gif">
+<meta property="og:image" content="https://github.com/jzoom/images/raw/master/layout1.gif">
+<meta property="og:image" content="https://github.com/jzoom/images/raw/master/layout4.gif">
+<meta property="og:image" content="https://github.com/serenader2014/flutter_carousel_slider/raw/master/screenshot/fullscreen.gif">
+<meta property="og:image" content="https://github.com/serenader2014/flutter_carousel_slider/raw/master/screenshot/manually.gif">
+<meta property="og:image" content="https://github.com/serenader2014/flutter_carousel_slider/raw/master/screenshot/indicator.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/letsar/flutter_slidable/assets/flutter_favorite.png">
+<meta property="og:image" content="https://stream-blog.s3.amazonaws.com/blog/wp-content/uploads/fc148f0fc75d02841d017bb36e14e388/Stream-logo-with-background-.png">
+<meta property="og:image" content="https://github.com/chinabrant/popup_menu/raw/master/popupmenu.png">
+<meta property="og:image" content="https://wx2.sinaimg.cn/mw1024/acbce940gy1g6hsz8a1t2j20eg0ac74q.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/mw1024/acbce940gy1g6hsz86ki9j209u0am74i.jpg">
+<meta property="og:image" content="https://contrib.rocks/image?repo=flutter-form-builder-ecosystem/flutter_form_builder">
+<meta property="og:image" content="https://raw.githubusercontent.com/AbdulRahmanAlHamali/flutter_typeahead/master/flutter_typeahead.gif">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/16646600?v=3">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/2034925?v=3">
+<meta property="og:image" content="https://github.com/Cretezy/flutter_linkify/raw/master/example/screenshot.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malikwang/expand_tap_area/master/images/1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malikwang/expand_tap_area/master/images/2.png">
+<meta property="og:image" content="https://github.com/sla-000/flutter_debouncer/raw/master/page/debounced.gif">
+<meta property="og:image" content="https://github.com/adar2378/draggable_widget/raw/master/demo/logo.png">
+<meta property="og:image" content="https://github.com/adar2378/draggable_widget/raw/master/demo/demo.gif">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LvKang-insist/PicGo/202202171737802.gif">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LvKang-insist/PicGo/202202171740609.gif">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LvKang-insist/PicGo/202202171740850.gif">
+<meta property="og:image" content="https://github.com/shadabunique/flutter_draggable_fab/raw/master/example/screenshots/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Smueez/assets/main/floating_widget.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Smueez/assets/main/autoAlign.gif">
+<meta property="og:image" content="https://user-images.githubusercontent.com/1295961/45949308-cbb2f680-bffb-11e8-8054-28c35ed6d132.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/1295961/160238710-1b5a987a-478e-41b4-b11c-37be8670a8c9.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/1295961/160238906-540a4a0d-b721-4c73-8b58-58b96b5e6414.png">
+<meta property="og:image" content="https://github.com/mitesh77/Best-Flutter-UI-Templates/raw/master/best_flutter_ui_templates/assets/introduction_animation/introduction_animation.png">
+<meta property="og:image" content="https://github.com/mitesh77/Best-Flutter-UI-Templates/raw/master/images/custom_drawer.png">
+<meta property="og:image" content="https://github.com/mitesh77/Best-Flutter-UI-Templates/raw/master/best_flutter_ui_templates/assets/hotel/hotel_booking.png">
+<meta property="og:image" content="https://github.com/flutterchina/flukit/raw/main/./docs/images/quick_scroll_bar.gif">
+<meta property="og:image" content="https://github.com/flutterchina/flukit/raw/main/./docs/images/animated_rotation_box.gif">
+<meta property="og:image" content="https://github.com/flutterchina/flukit/raw/main/./docs/images/gradient_circular_progress_indicator.gif">
+<meta property="og:image" content="https://i.imgur.com/R28hqdz.png">
+<meta property="og:image" content="https://fluttercommunity.dev/_github/header/flutter_launcher_icons">
+<meta property="og:image" content="https://raw.githubusercontent.com/Rannie/Rannie.github.io/master/images/2019-12-18-overview-2.png">
+<meta property="og:image" content="https://abtfun.oss-cn-beijing.aliyuncs.com/img/2020-03-11-dynamic-poster-1.png">
+<meta property="og:image" content="https://abtfun.oss-cn-beijing.aliyuncs.com/img/2019-12-18-Artboard.png">
+<meta property="og:image" content="https://natrium.io/assets/natrium-themes.jpg">
+<meta property="og:image" content="https://natrium.io/assets/natrium-qt-1.gif">
+<meta property="og:image" content="https://natrium.io/assets/natrium-qt-2.gif">
+<meta property="article:published_time" content="2021-02-26T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-18T15:26:02.594Z">
+<meta property="article:author" content="王氩">
+<meta property="article:tag" content="Flutter">
+<meta property="article:tag" content="dart">
+<meta property="article:tag" content="UI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/jogboms/flutter_spinkit/master/screenshots/spinkit_wave_spinner.gif">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Flutter UI libraries - 码猴王</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"623637646.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"UA-77478406-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'UA-77478406-1', 'auto');
+          ga('send', 'pageview');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>码猴王</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/background.jpeg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Flutter UI libraries"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-02-26 00:00" pubdate>
+          2021年2月26日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          8.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          69 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Flutter UI libraries</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>
+<h2 id="Loading-Shimmer-Skeleton-Toast-Hub"><a href="#Loading-Shimmer-Skeleton-Toast-Hub" class="headerlink" title="Loading, Shimmer, Skeleton, Toast, Hub"></a>Loading, Shimmer, Skeleton, Toast, Hub</h2><h3 id="flutter-spinkit"><a href="#flutter-spinkit" class="headerlink" title="flutter_spinkit"></a><a target="_blank" rel="noopener" href="https://github.com/jogboms/flutter_spinkit">flutter_spinkit</a></h3><p>stars: 2.6k    &lt;android, animation, animation-library, dart, dartlang, flutter, flutter-plugin, ios, loaders, loading, loading-animations, spinkit&gt;</p>
+<blockquote>
+<p>✨ A collection of loading indicators animated with flutter. Heavily Inspired by <a target="_blank" rel="noopener" href="http://tobiasahlin.com/spinkit">http://tobiasahlin.com/spinkit</a>.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/jogboms/flutter_spinkit/master/screenshots/spinkit_wave_spinner.gif" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/abhishek0706/flutter_spinkit/square_circle/screenshots/square_circle.gif" class="lazyload"></p>
+
+<p><img data-src="https://avatars2.githubusercontent.com/u/6208486?s=400&u=01fab3fc9bb3d2ee799e314d3fe23c54d1deeb07&v=4" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-shimmer"><a href="#flutter-shimmer" class="headerlink" title="flutter_shimmer"></a><a target="_blank" rel="noopener" href="https://github.com/hnvn/flutter_shimmer">flutter_shimmer</a></h3><p>stars: 1.5k    &lt;animation, dart, flutter, loading&gt;</p>
+<blockquote>
+<p>A package provides an easy way to add shimmer effect in Flutter project</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/hnvn/flutter_shimmer/raw/master/screenshots/loading_list.gif?raw=true" class="lazyload"></p>
+
+<p><img data-src="https://github.com/hnvn/flutter_shimmer/raw/master/screenshots/slide_to_unlock.gif?raw=true" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="FlutterToast"><a href="#FlutterToast" class="headerlink" title="FlutterToast"></a><a target="_blank" rel="noopener" href="https://github.com/ponnamkarthik/FlutterToast">FlutterToast</a></h3><p>stars: 1.2k    &lt;android, custom-toast, desktop, flutter, flutter-package, flutter-plugin, fluttertoast, ios, toast, toast-library, web&gt;</p>
+<blockquote>
+<p>Toast Plugin for Flutter</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/ponnamkarthik/FlutterToast/master/screenshot/11.jpg" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/ponnamkarthik/FlutterToast/master/screenshot/1.png" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/ponnamkarthik/FlutterToast/master/screenshot/2.png" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-easyloading"><a href="#flutter-easyloading" class="headerlink" title="flutter_easyloading"></a><a target="_blank" rel="noopener" href="https://github.com/nslogx/flutter_easyloading">flutter_easyloading</a></h3><p>stars: 925    &lt;android, custom-animation, dart, dartlang, flutter, flutter-easyloading, flutter-package, flutter-plugin, flutter-toast, flutter-widget, indicator, ios, loading, spinkit, toast, widget&gt;</p>
+<blockquote>
+<p>✨A clean and lightweight loading&#x2F;toast widget for Flutter, easy to use without context, support iOS、Android and Web</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/nslogx/flutter_easyloading/master/images/jetbrains.png" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/nslogx/flutter_easyloading/master/images/gif01.gif" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/nslogx/flutter_easyloading/master/images/gif02.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="bot-toast"><a href="#bot-toast" class="headerlink" title="bot_toast"></a><a target="_blank" rel="noopener" href="https://github.com/MMMzq/bot_toast">bot_toast</a></h3><p>stars: 707    &lt;attachments, custom-toast, flutter, flutter-toast, loading, notification, toast&gt;</p>
+<blockquote>
+<p>A really easy to use flutter toast library</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/MMMzq/bot_toast/raw/master/doc/gif/custom_animation.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/MMMzq/bot_toast/raw/master/doc/gif/loading.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/MMMzq/bot_toast/raw/master/doc/gif/text.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-percent-indicator"><a href="#flutter-percent-indicator" class="headerlink" title="flutter_percent_indicator"></a><a target="_blank" rel="noopener" href="https://github.com/diegoveloper/flutter_percent_indicator">flutter_percent_indicator</a></h3><p>stars: 563</p>
+<blockquote>
+<p>Flutter percent indicator library</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://image.ibb.co/doViid/screen1.png" class="lazyload"></p>
+
+<p><img data-src="https://image.ibb.co/bszyGy/screen2.png" class="lazyload"></p>
+
+<p><img data-src="https://media.giphy.com/media/88j2PmdEqCrLq2pZxO/giphy.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-easyHub"><a href="#flutter-easyHub" class="headerlink" title="flutter_easyHub"></a><a target="_blank" rel="noopener" href="https://github.com/ifgyong/flutter_easyHub">flutter_easyHub</a></h3><p>stars: 85</p>
+<blockquote>
+<p>🔥🔥🔥简单易用的toast动画，支持iOS和android，支持widget添加，纯flutter，现在有近30种动画可供选择。Simple and easy toast animation, supports iOS and android, supports widget addition, pure flutter, now there are nearly 30 kinds of animations to choose from。</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/ifgyong/flutter_easyHub/raw/master/images/all.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/ifgyong/flutter_easyHub/raw/master/images/example2.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/ifgyong/flutter_easyHub/raw/master/images/example3.gif" class="lazyload"></p>
+
+</details>
+
+
+
+
+
+<h2 id="Translation-Animation-Theme"><a href="#Translation-Animation-Theme" class="headerlink" title="Translation, Animation, Theme"></a>Translation, Animation, Theme</h2><h3 id="sliding-up-panel"><a href="#sliding-up-panel" class="headerlink" title="sliding_up_panel"></a><a target="_blank" rel="noopener" href="https://github.com/akshathjain/sliding_up_panel">sliding_up_panel</a></h3><p>stars: 1.2k    &lt;dart, flutter, plugin&gt;</p>
+<blockquote>
+<p>A draggable Flutter widget that makes implementing a SlidingUpPanel much easier!</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/akshathjain/sliding_up_panel/master/screenshots/simpleusageclosed.png" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/akshathjain/sliding_up_panel/master/screenshots/simpleusagemidway.png" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/akshathjain/sliding_up_panel/master/screenshots/simpleusageopen.png" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-staggered-animations"><a href="#flutter-staggered-animations" class="headerlink" title="flutter_staggered_animations"></a><a target="_blank" rel="noopener" href="https://github.com/The-ring-io/flutter_staggered_animations">flutter_staggered_animations</a></h3><p>stars: 1.2k</p>
+<blockquote>
+<p>Easily add staggered animations to your ListView, GridView, Column and Row children.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/mobiten/flutter_staggered_animations/raw/master/assets/card_list.gif?raw=true" class="lazyload"></p>
+
+<p><img data-src="https://github.com/mobiten/flutter_staggered_animations/raw/master/assets/card_grid.gif?raw=true" class="lazyload"></p>
+
+<p><img data-src="https://github.com/mobiten/flutter_staggered_animations/raw/master/assets/card_column.gif?raw=true" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="liquid-swipe-flutter"><a href="#liquid-swipe-flutter" class="headerlink" title="liquid_swipe_flutter"></a><a target="_blank" rel="noopener" href="https://github.com/iamSahdeep/liquid_swipe_flutter">liquid_swipe_flutter</a></h3><p>stars: 951    &lt;flutter, flutter-app, flutter-apps, flutter-material, flutter-package, flutter-plugin, flutter-ui, flutter-widget&gt;</p>
+<blockquote>
+<p>A flutter based liquid swipe</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/iamSahdeep/liquid_swipe_flutter/master/assets/page1.png" class="lazyload"></p>
+
+<p><img data-src="https://cdn-images-1.medium.com/max/1200/1*2yFbiGdcACiuLGo4dMKmJw.jpeg" class="lazyload"></p>
+
+<p><img data-src="https://avatars1.githubusercontent.com/u/26563213?v=4" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="smooth-page-indicator"><a href="#smooth-page-indicator" class="headerlink" title="smooth_page_indicator"></a><a target="_blank" rel="noopener" href="https://github.com/Milad-Akarie/smooth_page_indicator">smooth_page_indicator</a></h3><p>stars: 807</p>
+<blockquote>
+<p>Flutter Smooth PageView indicators</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/Milad-Akarie/smooth_page_indicator/raw/master/demo/smooth_page_indicator_demo_1.gif?raw=true" class="lazyload"></p>
+
+<p><img data-src="https://github.com/Milad-Akarie/smooth_page_indicator/raw/master/demo/smooth_page_indicator_demo_loop.gif?raw=true" class="lazyload"></p>
+
+<p><img data-src="https://github.com/Milad-Akarie/smooth_page_indicator/raw/master/demo/smooth_page_indicator_demo_4.gif?raw=true" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="rive-flutter"><a href="#rive-flutter" class="headerlink" title="rive-flutter"></a><a target="_blank" rel="noopener" href="https://github.com/rive-app/rive-flutter">rive-flutter</a></h3><p>stars: 695</p>
+<h3 id="animated-theme-switcher"><a href="#animated-theme-switcher" class="headerlink" title="animated_theme_switcher"></a><a target="_blank" rel="noopener" href="https://github.com/kherel/animated_theme_switcher">animated_theme_switcher</a></h3><p>stars: 209    &lt;flutter, flutter-animation, theme&gt;</p>
+<blockquote>
+<p>Flutter animated theme switcher</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/kherel/animated_theme_switcher/raw/master/demo.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-interactional-widget"><a href="#flutter-interactional-widget" class="headerlink" title="flutter_interactional_widget"></a><a target="_blank" rel="noopener" href="https://github.com/fluttercandies/flutter_interactional_widget">flutter_interactional_widget</a></h3><p>stars: 141</p>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/846b5b7e53734048acdca30923fde68a~tplv-k3u1fbpfcp-zoom-1.image" class="lazyload"></p>
+
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/005efc69521e40f39aad976b8f1d7327~tplv-k3u1fbpfcp-zoom-1.image" class="lazyload"></p>
+
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b38b45cc5f1a4c07afef8e24c4f741ce~tplv-k3u1fbpfcp-zoom-1.image" class="lazyload"></p>
+
+</details>
+
+
+
+
+
+<h2 id="List-Scroll-Grid"><a href="#List-Scroll-Grid" class="headerlink" title="List, Scroll, Grid"></a>List, Scroll, Grid</h2><h3 id="flutter-staggered-grid-view"><a href="#flutter-staggered-grid-view" class="headerlink" title="flutter_staggered_grid_view"></a><a target="_blank" rel="noopener" href="https://github.com/letsar/flutter_staggered_grid_view">flutter_staggered_grid_view</a></h3><p>stars: 2.6k    &lt;dart, flutter, staggeredgrid&gt;</p>
+<blockquote>
+<p>A Flutter staggered grid view</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://avatars.githubusercontent.com/u/32631467?v=4" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="inview-notifier-list"><a href="#inview-notifier-list" class="headerlink" title="inview_notifier_list"></a><a target="_blank" rel="noopener" href="https://github.com/rvamsikrishna/inview_notifier_list">inview_notifier_list</a></h3><p>stars: 483    &lt;autoplay, flutter, listview, notification, package, scroll, video&gt;</p>
+<blockquote>
+<p>A Flutter package that builds a list view and notifies when the widgets are on screen.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://user-images.githubusercontent.com/31307345/59602739-2f022d00-9125-11e9-84ef-19a33f8bd782.gif" class="lazyload"></p>
+
+<p><img data-src="https://user-images.githubusercontent.com/31307345/59602740-2f022d00-9125-11e9-8ee6-044e44f6048f.gif" class="lazyload"></p>
+
+<p><img data-src="https://user-images.githubusercontent.com/31307345/59602744-2f9ac380-9125-11e9-8a8f-7e68bdc27c16.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="extended-nested-scroll-view"><a href="#extended-nested-scroll-view" class="headerlink" title="extended_nested_scroll_view"></a><a target="_blank" rel="noopener" href="https://github.com/fluttercandies/extended_nested_scroll_view">extended_nested_scroll_view</a></h3><p>stars: 432    &lt;flutter, nestedscrollview, pinned-sliver-headers, tabview-sync-issue&gt;</p>
+<blockquote>
+<p>extended nested scroll view to fix following issues.  1.pinned sliver header issue  2.inner scrollables in tabview sync issue  3.pull to refresh is not work. 4.do without ScrollController in NestedScrollView’s body</p>
+</blockquote>
+<h3 id="flutter-draggable-gridview"><a href="#flutter-draggable-gridview" class="headerlink" title="flutter_draggable_gridview"></a><a target="_blank" rel="noopener" href="https://github.com/Mindinventory/flutter_draggable_gridview">flutter_draggable_gridview</a></h3><p>stars: 59    &lt;collection-view, draggable, draggable-collection, flutter, flutter-collection-view, flutter-draggable-gridview, graggable-gridview, gridview&gt;</p>
+<blockquote>
+<p>This package supports drag &amp; drop widgets inside the GridView.builder for multiplatform. It provides all the properties which are available in Gridview. builder and easy to implement with the few lines of code.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/Mindinventory/flutter_draggable_gridview/raw/main/assets/draggable_gridview.gif" class="lazyload"></p>
+
+</details>
+
+
+
+
+
+<h2 id="Images-Blur"><a href="#Images-Blur" class="headerlink" title="Images, Blur"></a>Images, Blur</h2><h3 id="photo-view"><a href="#photo-view" class="headerlink" title="photo_view"></a><a target="_blank" rel="noopener" href="https://github.com/bluefireteam/photo_view">photo_view</a></h3><p>stars: 1.6k    &lt;flutter, gallery, hacktoberfest, images, photos, photoview, pinch-to-zoom, rotate, widget, zoom, zoomable&gt;</p>
+<blockquote>
+<p>📸 Easy to use yet very customizable zoomable image widget for Flutter, Photo View provides a gesture sensitive zoomable widget. Photo View is largely used to show interacive images and other stuff such as SVG.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://user-images.githubusercontent.com/6718144/56463745-45ec0380-63b0-11e9-8e56-0dba5deabb1a.gif" class="lazyload"></p>
+
+<p><img data-src="https://user-images.githubusercontent.com/6718144/56463769-e93d1880-63b0-11e9-8586-55827c95b89c.gif" class="lazyload"></p>
+
+<p><img data-src="https://user-images.githubusercontent.com/6718144/56464051-3328fd00-63b7-11e9-9c4d-73b04f72a81e.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-svg"><a href="#flutter-svg" class="headerlink" title="flutter_svg"></a><a target="_blank" rel="noopener" href="https://github.com/dnfield/flutter_svg">flutter_svg</a></h3><p>stars: 1.4k    &lt;dart, flutter, flutter-plugin, svg&gt;</p>
+<blockquote>
+<p>SVG parsing, rendering, and widget library for Flutter</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://user-images.githubusercontent.com/2842459/62599914-91de9c00-b8fe-11e9-8fb7-4af57d5100f7.png" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/dnfield/flutter_svg/7d374d7107561cbd906d7c0ca26fef02cc01e7c8/example/assets/flutter_logo.svg?sanitize=true" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-blurhash"><a href="#flutter-blurhash" class="headerlink" title="flutter_blurhash"></a><a target="_blank" rel="noopener" href="https://github.com/fluttercommunity/flutter_blurhash">flutter_blurhash</a></h3><p>stars: 396    &lt;blurhash, dartlang, flutter&gt;</p>
+<blockquote>
+<p>Compact representation of a placeholder for an image. Encode a blurry image under 30 caracters for instant display like used by Medium. Maintainer: @Solido</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://user-images.githubusercontent.com/1295961/75059847-129d6800-54de-11ea-8832-d19ea58eb7eb.png" class="lazyload"></p>
+
+<p><img data-src="https://fluttercommunity.dev/_github/header/flutter_blurhash" class="lazyload"></p>
+
+</details>
+
+
+
+
+
+<h2 id="Refresh-Load-more-Pull-to-refresh"><a href="#Refresh-Load-more-Pull-to-refresh" class="headerlink" title="Refresh, Load more, Pull to refresh"></a>Refresh, Load more, Pull to refresh</h2><h3 id="flutter-easy-refresh"><a href="#flutter-easy-refresh" class="headerlink" title="flutter_easy_refresh"></a><a target="_blank" rel="noopener" href="https://github.com/xuelongqy/flutter_easy_refresh">flutter_easy_refresh</a></h3><p>stars: 3.2k    &lt;easy-refresh, flutter, load-more, refresh&gt;</p>
+<blockquote>
+<p>A flutter widget that provides pull-down refresh and pull-up load.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/xuelongqy/donation/master/ethereum_qr.png?raw=true" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/xuelongqy/donation/master/tron_qr.png?raw=true" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/xuelongqy/donation/master/bitcoin_qr.png?raw=true" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-pulltorefresh"><a href="#flutter-pulltorefresh" class="headerlink" title="flutter_pulltorefresh"></a><a target="_blank" rel="noopener" href="https://github.com/peng8350/flutter_pulltorefresh">flutter_pulltorefresh</a></h3><p>stars: 2.4k</p>
+<blockquote>
+<p>a widget provided to the flutter scroll component drop-down refresh and pull up load.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/peng8350/flutter_pulltorefresh/raw/master/arts/example1.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/peng8350/flutter_pulltorefresh/raw/master/arts/example2.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/peng8350/flutter_pulltorefresh/raw/master/arts/example3.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="Liquid-Pull-To-Refresh"><a href="#Liquid-Pull-To-Refresh" class="headerlink" title="Liquid-Pull-To-Refresh"></a><a target="_blank" rel="noopener" href="https://github.com/aagarwal1012/Liquid-Pull-To-Refresh">Liquid-Pull-To-Refresh</a></h3><p>stars: 1k    &lt;android, flutter, hacktoberfest, ios, pull-to-refresh, refresh-indicator, swipe-refresh, swipe-to-refresh, swiperefreshlayout&gt;</p>
+<blockquote>
+<p>🔁 A custom refresh indicator for flutter.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/aagarwal1012/Liquid-Pull-To-Refresh/raw/master/display/cover.png?raw=true" class="lazyload"></p>
+
+<p><img data-src="https://github.com/aagarwal1012/Liquid-Pull-To-Refresh/raw/master/display/liquid.gif?raw=true" class="lazyload"></p>
+
+<p><img data-src="https://github.com/aagarwal1012/Liquid-Pull-To-Refresh/raw/master/display/liquid_false.gif?raw=true" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-custom-refresh-indicator"><a href="#flutter-custom-refresh-indicator" class="headerlink" title="flutter-custom-refresh-indicator"></a><a target="_blank" rel="noopener" href="https://github.com/gonuit/flutter-custom-refresh-indicator">flutter-custom-refresh-indicator</a></h3><p>stars: 285</p>
+<blockquote>
+<p>This package adds CustomRefreshIndicator widget that allows you to create whatever indicator you want.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/gonuit/flutter-custom-refresh-indicator/raw/master/readme/cover.png" class="lazyload"></p>
+
+<p><img data-src="https://github.com/gonuit/flutter-custom-refresh-indicator/raw/master/readme/plane_indicator.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/gonuit/flutter-custom-refresh-indicator/raw/master/readme/ice_cream_indicator.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="loading-more-list"><a href="#loading-more-list" class="headerlink" title="loading_more_list"></a><a target="_blank" rel="noopener" href="https://github.com/fluttercandies/loading_more_list">loading_more_list</a></h3><p>stars: 274    &lt;flutter, load-more, pull-up-refresh, sliverlist, waterfall-flow&gt;</p>
+<blockquote>
+<p>A loading more list which supports ListView,GridView,WaterfallFlow and Slivers.</p>
+</blockquote>
+<h3 id="pull-to-refresh-notification"><a href="#pull-to-refresh-notification" class="headerlink" title="pull_to_refresh_notification"></a><a target="_blank" rel="noopener" href="https://github.com/fluttercandies/pull_to_refresh_notification">pull_to_refresh_notification</a></h3><p>stars: 166    &lt;flutter, pull-to-refresh&gt;</p>
+<blockquote>
+<p>Flutter plugin for building pull to refresh effects with PullToRefreshNotification and PullToRefreshContainer quickly.</p>
+</blockquote>
+<h2 id="Carousel-Swiper"><a href="#Carousel-Swiper" class="headerlink" title="Carousel, Swiper"></a>Carousel, Swiper</h2><h3 id="flutter-swiper"><a href="#flutter-swiper" class="headerlink" title="flutter_swiper"></a><a target="_blank" rel="noopener" href="https://github.com/best-flutter/flutter_swiper">flutter_swiper</a></h3><p>stars: 3.3k    &lt;carousel, carousel-plugin, flutter, flutter-plugin, flutter-widget, swiper&gt;</p>
+<blockquote>
+<p>The best swiper for flutter , with multiple layouts, infinite loop. Compatible with Android &amp; iOS.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/jzoom/images/raw/master/layout2.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/jzoom/images/raw/master/layout1.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/jzoom/images/raw/master/layout4.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-carousel-slider"><a href="#flutter-carousel-slider" class="headerlink" title="flutter_carousel_slider"></a><a target="_blank" rel="noopener" href="https://github.com/serenader2014/flutter_carousel_slider">flutter_carousel_slider</a></h3><p>stars: 1.3k    &lt;autoplay, carousel-slider, flutter, infinite-scroll, widget&gt;</p>
+<blockquote>
+<p>A flutter carousel widget, support infinite scroll, and custom child widget.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/serenader2014/flutter_carousel_slider/raw/master/screenshot/fullscreen.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/serenader2014/flutter_carousel_slider/raw/master/screenshot/manually.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/serenader2014/flutter_carousel_slider/raw/master/screenshot/indicator.gif" class="lazyload"></p>
+
+</details>
+
+
+
+
+
+<h2 id="Menu-Swipe-menu-Slide-menu-Cell"><a href="#Menu-Swipe-menu-Slide-menu-Cell" class="headerlink" title="Menu, Swipe menu, Slide menu, Cell"></a>Menu, Swipe menu, Slide menu, Cell</h2><h3 id="flutter-slidable"><a href="#flutter-slidable" class="headerlink" title="flutter_slidable"></a><a target="_blank" rel="noopener" href="https://github.com/letsar/flutter_slidable">flutter_slidable</a></h3><p>stars: 2.2k    &lt;dart, flutter, slide-menu, swipe-menu&gt;</p>
+<blockquote>
+<p>A Flutter implementation of slidable list item with directional slide actions.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/letsar/flutter_slidable/assets/flutter_favorite.png" class="lazyload"></p>
+
+<p><img data-src="https://stream-blog.s3.amazonaws.com/blog/wp-content/uploads/fc148f0fc75d02841d017bb36e14e388/Stream-logo-with-background-.png" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="popup-menu"><a href="#popup-menu" class="headerlink" title="popup_menu"></a><a target="_blank" rel="noopener" href="https://github.com/chinabrant/popup_menu">popup_menu</a></h3><p>stars: 370</p>
+<blockquote>
+<p>🔥A flutter popup menu. Pub enabled.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/chinabrant/popup_menu/raw/master/popupmenu.png" class="lazyload"></p>
+
+<p><img data-src="https://wx2.sinaimg.cn/mw1024/acbce940gy1g6hsz8a1t2j20eg0ac74q.jpg" class="lazyload"></p>
+
+<p><img data-src="https://wx3.sinaimg.cn/mw1024/acbce940gy1g6hsz86ki9j209u0am74i.jpg" class="lazyload"></p>
+
+</details>
+
+
+
+
+
+<h2 id="Form-Input-Text-Rich-text"><a href="#Form-Input-Text-Rich-text" class="headerlink" title="Form, Input, Text, Rich text"></a>Form, Input, Text, Rich text</h2><h3 id="flutter-form-builder"><a href="#flutter-form-builder" class="headerlink" title="flutter_form_builder"></a><a target="_blank" rel="noopener" href="https://github.com/flutter-form-builder-ecosystem/flutter_form_builder">flutter_form_builder</a></h3><p>stars: 1.1k    &lt;dart, flutter, form-validation, forms&gt;</p>
+<blockquote>
+<p>Simple form maker for Flutter Framework</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://contrib.rocks/image?repo=flutter-form-builder-ecosystem/flutter_form_builder" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-typeahead"><a href="#flutter-typeahead" class="headerlink" title="flutter_typeahead"></a><a target="_blank" rel="noopener" href="https://github.com/AbdulRahmanAlHamali/flutter_typeahead">flutter_typeahead</a></h3><p>stars: 630</p>
+<blockquote>
+<p>A TypeAhead widget for Flutter, where you can show suggestions to users as they type</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/AbdulRahmanAlHamali/flutter_typeahead/master/flutter_typeahead.gif" class="lazyload"></p>
+
+<p><img data-src="https://avatars.githubusercontent.com/u/16646600?v=3" class="lazyload"></p>
+
+<p><img data-src="https://avatars.githubusercontent.com/u/2034925?v=3" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-linkify"><a href="#flutter-linkify" class="headerlink" title="flutter_linkify"></a><a target="_blank" rel="noopener" href="https://github.com/Cretezy/flutter_linkify">flutter_linkify</a></h3><p>stars: 221    &lt;dart, flutter, linkify&gt;</p>
+<blockquote>
+<p>Turns text URLs and emails into clickable inline links in text for Flutter</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/Cretezy/flutter_linkify/raw/master/example/screenshot.png" class="lazyload"></p>
+
+</details>
+
+
+
+
+
+<h2 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h2><h3 id="expand-tap-area"><a href="#expand-tap-area" class="headerlink" title="expand_tap_area"></a><a target="_blank" rel="noopener" href="https://github.com/malikwang/expand_tap_area">expand_tap_area</a></h3><p>stars: 34</p>
+<blockquote>
+<p>Manually expand the tap area of a widget without changing its size or layout. Similar with the hitTest in iOS development.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/malikwang/expand_tap_area/master/images/1.png" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/malikwang/expand_tap_area/master/images/2.png" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-defer-pointer"><a href="#flutter-defer-pointer" class="headerlink" title="flutter-defer-pointer"></a><a target="_blank" rel="noopener" href="https://github.com/gskinnerTeam/flutter-defer-pointer">flutter-defer-pointer</a></h3><p>stars: 25</p>
+<h3 id="flutter-debouncer"><a href="#flutter-debouncer" class="headerlink" title="flutter_debouncer"></a><a target="_blank" rel="noopener" href="https://github.com/sla-000/flutter_debouncer">flutter_debouncer</a></h3><p>stars: 11</p>
+<blockquote>
+<p>Tap debounce simplifying widget and utils</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/sla-000/flutter_debouncer/raw/master/page/debounced.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="extra-hittest-area"><a href="#extra-hittest-area" class="headerlink" title="extra_hittest_area"></a><a target="_blank" rel="noopener" href="https://github.com/fluttercandies/extra_hittest_area">extra_hittest_area</a></h3><p>stars: 10    &lt;flutter, hittest&gt;</p>
+<blockquote>
+<p>Manually add the extra hitTest area of a widget without changing its size or layout.</p>
+</blockquote>
+<h2 id="Draggable"><a href="#Draggable" class="headerlink" title="Draggable"></a>Draggable</h2><h3 id="draggable-widget"><a href="#draggable-widget" class="headerlink" title="draggable_widget"></a><a target="_blank" rel="noopener" href="https://github.com/adar2378/draggable_widget">draggable_widget</a></h3><p>stars: 31</p>
+<blockquote>
+<p>A flutter package which will help you to create a draggable widget that can be dragged around the screen.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/adar2378/draggable_widget/raw/master/demo/logo.png" class="lazyload"></p>
+
+<p><img data-src="https://github.com/adar2378/draggable_widget/raw/master/demo/demo.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-floating"><a href="#flutter-floating" class="headerlink" title="flutter_floating"></a><a target="_blank" rel="noopener" href="https://github.com/LvKang-insist/flutter_floating">flutter_floating</a></h3><p>stars: 17    &lt;android, dart, floating, flutter, ios&gt;</p>
+<blockquote>
+<p>Flutter免权限悬浮窗，支持全局、单页面悬浮，支持边缘吸附、回弹、位置保存、上下可滑动区域控制以及屏幕旋转窗口化后的位置修复等。The Flutter perposition-free suspension window supports global and single page suspension, edge adsorption, rebound, position saving, sliding up and down area control, and position repair after screen rotation window。</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://cdn.jsdelivr.net/gh/LvKang-insist/PicGo/202202171737802.gif" class="lazyload"></p>
+
+<p><img data-src="https://cdn.jsdelivr.net/gh/LvKang-insist/PicGo/202202171740609.gif" class="lazyload"></p>
+
+<p><img data-src="https://cdn.jsdelivr.net/gh/LvKang-insist/PicGo/202202171740850.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-draggable-fab"><a href="#flutter-draggable-fab" class="headerlink" title="flutter_draggable_fab"></a><a target="_blank" rel="noopener" href="https://github.com/shadabunique/flutter_draggable_fab">flutter_draggable_fab</a></h3><p>stars: 5</p>
+<blockquote>
+<p> A  Flutter widget</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/shadabunique/flutter_draggable_fab/raw/master/example/screenshots/demo.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="floating-animated-widget"><a href="#floating-animated-widget" class="headerlink" title="floating_animated_widget"></a><a target="_blank" rel="noopener" href="https://github.com/Smueez/floating_animated_widget">floating_animated_widget</a></h3><p>stars: 1</p>
+<blockquote>
+<p>a flutter package for floating widget</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/Smueez/assets/main/floating_widget.gif" class="lazyload"></p>
+
+<p><img data-src="https://raw.githubusercontent.com/Smueez/assets/main/autoAlign.gif" class="lazyload"></p>
+
+</details>
+
+
+
+
+
+<h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><h3 id="awesome-flutter"><a href="#awesome-flutter" class="headerlink" title="awesome-flutter"></a><a target="_blank" rel="noopener" href="https://github.com/Solido/awesome-flutter">awesome-flutter</a></h3><p>stars: 42.2k    &lt;android, awesome, awesome-list, collections, cross-platform, dartlang, flutter, flutter-apps, flutter-examples, flutter-plugin, flutter-plugins, ios, material-design, mobile, mobile-app, mobile-development, reactive-programming, resources&gt;</p>
+<blockquote>
+<p>An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://user-images.githubusercontent.com/1295961/45949308-cbb2f680-bffb-11e8-8054-28c35ed6d132.png" class="lazyload"></p>
+
+<p><img data-src="https://user-images.githubusercontent.com/1295961/160238710-1b5a987a-478e-41b4-b11c-37be8670a8c9.png" class="lazyload"></p>
+
+<p><img data-src="https://user-images.githubusercontent.com/1295961/160238906-540a4a0d-b721-4c73-8b58-58b96b5e6414.png" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="Best-Flutter-UI-Templates"><a href="#Best-Flutter-UI-Templates" class="headerlink" title="Best-Flutter-UI-Templates"></a><a target="_blank" rel="noopener" href="https://github.com/mitesh77/Best-Flutter-UI-Templates">Best-Flutter-UI-Templates</a></h3><p>stars: 15.2k    &lt;cross-platform, flutter, flutter-app, flutter-apps, flutter-demo, flutter-examples, flutter-material, flutter-ui, flutter-widget&gt;</p>
+<blockquote>
+<p>completely free for everyone. Its build-in Flutter Dart.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/mitesh77/Best-Flutter-UI-Templates/raw/master/best_flutter_ui_templates/assets/introduction_animation/introduction_animation.png" class="lazyload"></p>
+
+<p><img data-src="https://github.com/mitesh77/Best-Flutter-UI-Templates/raw/master/images/custom_drawer.png" class="lazyload"></p>
+
+<p><img data-src="https://github.com/mitesh77/Best-Flutter-UI-Templates/raw/master/best_flutter_ui_templates/assets/hotel/hotel_booking.png" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flukit"><a href="#flukit" class="headerlink" title="flukit"></a><a target="_blank" rel="noopener" href="https://github.com/flutterchina/flukit">flukit</a></h3><p>stars: 4.3k    <flutter></p>
+<blockquote>
+<p> A Flutter UI Kit（一个 Flutter UI组件库），包含 ScaleView, Swiper, PullRefresh, WaterMark, GradientCircularProgressIndicator…</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/flutterchina/flukit/raw/main/./docs/images/quick_scroll_bar.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/flutterchina/flukit/raw/main/./docs/images/animated_rotation_box.gif" class="lazyload"></p>
+
+<p><img data-src="https://github.com/flutterchina/flukit/raw/main/./docs/images/gradient_circular_progress_indicator.gif" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-map"><a href="#flutter-map" class="headerlink" title="flutter_map"></a><a target="_blank" rel="noopener" href="https://github.com/fleaflet/flutter_map">flutter_map</a></h3><p>stars: 2.1k    &lt;dart, flutter, leaflet&gt;</p>
+<blockquote>
+<p>A Flutter map widget inspired by Leaflet</p>
+</blockquote>
+<h3 id="flutter-launcher-icons"><a href="#flutter-launcher-icons" class="headerlink" title="flutter_launcher_icons"></a><a target="_blank" rel="noopener" href="https://github.com/fluttercommunity/flutter_launcher_icons">flutter_launcher_icons</a></h3><p>stars: 1.6k    &lt;dart, flutter&gt;</p>
+<blockquote>
+<p>Flutter Launcher Icons - A package which simplifies the task of updating your Flutter app’s launcher icon. Fully flexible, allowing you to choose what platform you wish to update the launcher icon for and if you want, the option to keep your old launcher icon in case you want to revert back sometime in the future. Maintainer: @MarkOSullivan94</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://i.imgur.com/R28hqdz.png" class="lazyload"></p>
+
+<p><img data-src="https://fluttercommunity.dev/_github/header/flutter_launcher_icons" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flui"><a href="#flui" class="headerlink" title="flui"></a><a target="_blank" rel="noopener" href="https://github.com/Rannie/flui">flui</a></h3><p>stars: 1.4k    &lt;dynamic-rendering, flui, flutter, flutter-package, flutter-ui, flutter-widget, google-flutter, skeleton, toast, widgets&gt;</p>
+<blockquote>
+<p>A powerful UI framework for Google Flutter.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://raw.githubusercontent.com/Rannie/Rannie.github.io/master/images/2019-12-18-overview-2.png" class="lazyload"></p>
+
+<p><img data-src="https://abtfun.oss-cn-beijing.aliyuncs.com/img/2020-03-11-dynamic-poster-1.png" class="lazyload"></p>
+
+<p><img data-src="https://abtfun.oss-cn-beijing.aliyuncs.com/img/2019-12-18-Artboard.png" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutter-widgets"><a href="#flutter-widgets" class="headerlink" title="flutter.widgets"></a><a target="_blank" rel="noopener" href="https://github.com/google/flutter.widgets">flutter.widgets</a></h3><p>stars: 1k</p>
+<h3 id="natrium-wallet-flutter"><a href="#natrium-wallet-flutter" class="headerlink" title="natrium_wallet_flutter"></a><a target="_blank" rel="noopener" href="https://github.com/appditto/natrium_wallet_flutter">natrium_wallet_flutter</a></h3><p>stars: 675</p>
+<blockquote>
+<p>Natrium - Fast, Robust &amp; Secure NANO Wallet, now written with Flutter.</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://natrium.io/assets/natrium-themes.jpg" class="lazyload"></p>
+
+<p><img data-src="https://natrium.io/assets/natrium-qt-1.gif" class="lazyload"></p>
+
+<p><img data-src="https://natrium.io/assets/natrium-qt-2.gif" class="lazyload"></p>
+
+</details>
+
+
+
+
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Flutter/" class="category-chain-item">Flutter</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Flutter/">#Flutter</a>
+      
+        <a href="/tags/dart/">#dart</a>
+      
+        <a href="/tags/UI/">#UI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Flutter UI libraries</div>
+      <div>http://623637646.github.io/2021/02/26/Flutter UI/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>王氩</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年2月26日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/02/26/Flutter%20non-UI/" title="Flutter non-UI libraries">
+                        <span class="hidden-mobile">Flutter non-UI libraries</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
