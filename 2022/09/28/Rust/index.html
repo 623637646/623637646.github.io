@@ -16,25 +16,38 @@
   <meta name="author" content="王氩">
   <meta name="keywords" content="">
   
-    <meta name="description" content="码猴王de技术博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://623637646.github.io/archives/2016/03/index.html">
+    <meta name="description" content="I&#x2F;O, Networktokiostars: 17.7k    &lt;asynchronous, networking, rust&gt;  A runtime for writing reliable asynchronous applications with Rust. Provides I&#x2F;O, networking, scheduling, timers, …">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rust">
+<meta property="og:url" content="http://623637646.github.io/2022/09/28/Rust/index.html">
 <meta property="og:site_name" content="码猴王">
-<meta property="og:description" content="码猴王de技术博客">
+<meta property="og:description" content="I&#x2F;O, Networktokiostars: 17.7k    &lt;asynchronous, networking, rust&gt;  A runtime for writing reliable asynchronous applications with Rust. Provides I&#x2F;O, networking, scheduling, timers, …">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/fzyzcjy/flutter_rust_bridge/raw/master/book/logo.png">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/5236035?v=4?s=100">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/36768030?v=4?s=100">
+<meta property="article:published_time" content="2022-09-28T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-28T03:57:28.317Z">
 <meta property="article:author" content="王氩">
+<meta property="article:tag" content="Rust">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://github.com/fzyzcjy/flutter_rust_bridge/raw/master/book/logo.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>归档 - 码猴王</title>
+  <title>Rust - 码猴王</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -111,7 +124,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -216,9 +229,59 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="归档"></span>
+            <span id="subtitle" data-typed-text="Rust"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-28 00:00" pubdate>
+          2022年9月28日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          552 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
 
         
       </div>
@@ -234,52 +297,213 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 16 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2016</p>
-    
-    <a href="/2016/03/29/blog%E7%9B%B8%E5%85%B3/" class="list-group-item list-group-item-action">
-      <time>03-29</time>
-      <div class="list-group-item-title">blog相关</div>
-    </a>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Rust</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>
+<h2 id="I-x2F-O-Network"><a href="#I-x2F-O-Network" class="headerlink" title="I&#x2F;O, Network"></a>I&#x2F;O, Network</h2><h3 id="tokio"><a href="#tokio" class="headerlink" title="tokio"></a><a target="_blank" rel="noopener" href="https://github.com/tokio-rs/tokio">tokio</a></h3><p>stars: 17.7k    &lt;asynchronous, networking, rust&gt;</p>
+<blockquote>
+<p>A runtime for writing reliable asynchronous applications with Rust. Provides I&#x2F;O, networking, scheduling, timers, …</p>
+</blockquote>
+<h3 id="reqwest"><a href="#reqwest" class="headerlink" title="reqwest"></a><a target="_blank" rel="noopener" href="https://github.com/seanmonstar/reqwest">reqwest</a></h3><p>stars: 6.3k    &lt;http, http-client, rust&gt;</p>
+<blockquote>
+<p>An easy and powerful Rust HTTP Client</p>
+</blockquote>
+<h3 id="mio"><a href="#mio" class="headerlink" title="mio"></a><a target="_blank" rel="noopener" href="https://github.com/tokio-rs/mio">mio</a></h3><p>stars: 5.1k    &lt;asynchronous, networking, non-blocking, rust&gt;</p>
+<blockquote>
+<p>Metal IO library for Rust</p>
+</blockquote>
+<h2 id="Bridges-Cross-platform"><a href="#Bridges-Cross-platform" class="headerlink" title="Bridges, Cross-platform"></a>Bridges, Cross-platform</h2><h3 id="flutter-rust-bridge"><a href="#flutter-rust-bridge" class="headerlink" title="flutter_rust_bridge"></a><a target="_blank" rel="noopener" href="https://github.com/fzyzcjy/flutter_rust_bridge">flutter_rust_bridge</a></h3><p>stars: 1.8k    &lt;bindgen, dart, ffi, flutter, rust&gt;</p>
+<blockquote>
+<p>High-level memory-safe binding generator for Flutter&#x2F;Dart &lt;-&gt; Rust</p>
+</blockquote>
+<details>
+<summary>Click to see images</summary>
+
+<p><img data-src="https://github.com/fzyzcjy/flutter_rust_bridge/raw/master/book/logo.png" class="lazyload"></p>
+
+<p><img data-src="https://avatars.githubusercontent.com/u/5236035?v=4?s=100" class="lazyload"></p>
+
+<p><img data-src="https://avatars.githubusercontent.com/u/36768030?v=4?s=100" class="lazyload"></p>
+
+</details>
+
+
+
+<h3 id="flutterust"><a href="#flutterust" class="headerlink" title="flutterust"></a><a target="_blank" rel="noopener" href="https://github.com/shekohex/flutterust">flutterust</a></h3><p>stars: 563</p>
+<blockquote>
+<p>Flutter + Rust &#x3D; :heart:</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
   
     
-    <a href="/2016/03/14/iOS%20&amp;%20OS%20X%20%E5%BC%80%E5%8F%91%E8%AE%B0%E4%BA%8B%E6%9C%AC/" class="list-group-item list-group-item-action">
-      <time>03-14</time>
-      <div class="list-group-item-title">iOS &amp; OS X 开发记事本</div>
-    </a>
+      <span class="category-chain">
+        
+  <a href="/categories/Rust/" class="category-chain-item">Rust</a>
   
+  
+
+      </span>
     
-    <a href="/2016/03/14/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="list-group-item list-group-item-action">
-      <time>03-14</time>
-      <div class="list-group-item-title">开发工具</div>
-    </a>
   
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Rust/">#Rust</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Rust</div>
+      <div>http://623637646.github.io/2022/09/28/Rust/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>王氩</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年9月28日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/02/26/Flutter%20UI/" title="Flutter UI libraries">
+                        <span class="hidden-mobile">Flutter UI libraries</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
 </div>
 
 
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
 
     
@@ -397,6 +621,72 @@
 
 
 
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
 
