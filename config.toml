@@ -1,0 +1,64 @@
+base_url = "https://623637646.github.io"
+title = "Yanni Wang"
+description = "Notes on Rust, reactive programming and rx-rust."
+author = "Yanni Wang"
+theme = "tabi"
+
+default_language = "en"
+generate_feeds = true
+compile_sass = true
+minify_html = true
+build_search_index = true
+taxonomies = [{ name = "tags", feed = true }]
+
+[search]
+index_format = "elasticlunr_json"
+
+[markdown]
+bottom_footnotes = true
+smart_punctuation = true
+external_links_class = "external"
+github_alerts = true
+
+[markdown.highlighting]
+theme = "catppuccin-frappe"
+style = "class"
+error_on_missing_language = true
+
+# The Chinese versions of the posts sit next to the English ones, as `index.zh-Hans.md`.
+[languages.zh-Hans]
+title = "Yanni Wang"
+description = "关于 Rust、响应式编程和 rx-rust 的笔记。"
+generate_feeds = true
+taxonomies = [{ name = "tags", feed = true }]
+# The search index has no Chinese tokenizer.
+build_search_index = false
+
+[extra]
+skin = "teal"
+theme_switcher = true
+default_theme = ""
+
+menu = [
+    { name = "blog", url = "blog", trailing_slash = true },
+    { name = "archive", url = "archive", trailing_slash = true },
+    { name = "tags", url = "tags", trailing_slash = true },
+]
+socials = [
+    { name = "github", url = "https://github.com/623637646/", icon = "github" },
+]
+feed_icon = true
+full_content_in_feed = true
+
+remote_repository_url = "https://github.com/623637646/623637646.github.io"
+remote_repository_branch = "master"
+show_remote_changes = true
+show_remote_source = true
+
+copy_button = true
+show_reading_time = true
+show_date = true
+# No third-party like buttons or analytics.
+iine = false
+
+copyright = "© $CURRENT_YEAR $AUTHOR"
